@@ -41,6 +41,8 @@ inputs:
   suggest-recheck:
     description: "Controls whether or not the action's comment should suggest that users comment `recheck`."
     default: "true"
+  pr-number:
+    description: "pull request number (required when the workflow event is not pull_request / pull_request_target)"
 runs:
   using: "node20"
   main: 'dist/index.js'

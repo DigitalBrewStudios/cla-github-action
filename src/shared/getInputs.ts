@@ -46,3 +46,7 @@ export const lockPullRequestAfterMerge = (): string =>
 
 export const suggestRecheck = (): string =>
   core.getInput('suggest-recheck', { required: false })
+export const getPrNumber = (prNumberFromContext: number): number =>
+  prNumberFromContext ?
+    prNumberFromContext :
+    Number(core.getInput('pr-number', { required: false }))
